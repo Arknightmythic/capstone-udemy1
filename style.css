@@ -1,0 +1,207 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+}
+.hero{
+  width: 100%;
+  height: 742.4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bgvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover; /* Stretch video while maintaining aspect ratio */
+    z-index: -1; /* Place video behind other content */
+  }
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensure container fills the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically */
+    color: white; /* Customize text color */
+    font-size: 20px; /* Customize font size */
+    z-index: 1; /* Place the container on top of the video */
+
+  }
+
+.imprt{
+    text-decoration: underline;
+}
+
+.about{
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding:50px 0;
+}
+.avatar-circle {
+  width: 100px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  overflow: hidden; /* Hide overflowing parts of the image */
+  border-radius: 50%; /* Make the avatar circular */
+}
+
+.avatar-circle img {
+  width: 100%; /* Ensure image fills the container */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop image to fit container while maintaining aspect ratio */
+}
+.about .me,.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.me>p{
+  width: 30%;
+  margin: auto;
+  line-height: 1.5;
+  text-align: center;
+}
+.skill{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px 0;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#picskill{
+  width: 100px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  overflow: hidden; /* Hide overflowing parts of the image */
+  object-fit: cover;
+}
+
+#details{
+  margin: 0 15px;
+  width: 30%;
+}
+
+
+.btn{
+  background-color: #6C5F5B;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color:#9a8d89;
+  color: #ffffff8a;
+}
+
+.btn:active {
+  background-color:#d8d8d8;
+  color: #ffffff2b;
+}
+footer{
+  background-color: #6C5F5B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  gap: 20px;
+  color: #ffffff;
+}
+
+footer a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer a:hover{
+  color: #ffffff8a;
+}
+
+footer a:focus{
+  color: #ffffff2b;
+}
+
+div.social-media{
+  display: flex;
+  gap: 20px;
+}
+
+@media (min-aspect-ratio: 16/9){
+  #bgvideo{
+    width: 100%;
+    height: auto;
+  }
+
+  .title{
+    font-size: 36px;
+  }
+}
+
+
+@media (max-width:480px){
+  .me>p{
+    width: 60%;
+    margin: auto;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #picskill{
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflowing parts of the image */
+    object-fit: cover;
+  }
+  
+  #details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    width: 60%;
+  }
+  #details>p{
+    text-align: center;
+    margin-top: 0 ;
+  }
+
+  .contact>p{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  footer{
+    
+  }
+}
